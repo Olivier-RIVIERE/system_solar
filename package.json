@@ -2,7 +2,7 @@
   "name": "systeme-solaire",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Olivier-RIVIERE/system_solar.git",
+  "homepage": "https://olivier-riviere.github.io/systeme-solaire",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
