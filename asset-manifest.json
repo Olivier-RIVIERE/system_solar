@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Olivier-RIVIERE/system_solar.git/static/css/main.95675dbb.css",
+    "main.js": "/Olivier-RIVIERE/system_solar.git/static/js/main.fe0f3d41.js",
+    "static/media/ganymede.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/ganymede.29dc960557c25dd7d1a4.jpg",
+    "static/media/terre.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/terre.f2a8fbca1346d79d1c50.jpg",
+    "static/media/venus.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/venus.7fa6f0556e88a45bf072.jpg",
+    "static/media/sun.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/sun.9289d4d06ed5208e68f9.jpg",
+    "static/media/solar_system.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/solar_system.2fd178e5fe7a18457563.jpg",
+    "static/media/lune.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/lune.ccd38296a73d26295622.jpg",
+    "static/media/europa.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/europa.68ecd1efe2bac35b1f98.jpg",
+    "static/media/neptune.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/neptune.c88f4880af361ff0335a.jpg",
+    "static/media/jupiter.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/jupiter.ae6f95a05f69717a99ca.jpg",
+    "static/media/phobos.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/phobos.75f4250608dfc8c3493c.jpg",
+    "static/media/io.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/io.511c65281e5bbf91780d.jpg",
+    "static/media/mercure.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/mercure.62db51f7b513f5e707ef.jpg",
+    "static/media/callisto.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/callisto.a6ff004907ac8eea6ccb.jpg",
+    "static/media/mars.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/mars.158bfc0c62f0e3294356.jpg",
+    "static/media/saturn.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/saturn.db8a5f229efea7269339.jpg",
+    "static/media/deimos.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/deimos.fc49985f85ed50ee1936.jpg",
+    "static/media/uranus.jpg": "/Olivier-RIVIERE/system_solar.git/static/media/uranus.4eb23e3f9bb46619beb2.jpg",
+    "index.html": "/Olivier-RIVIERE/system_solar.git/index.html",
+    "main.95675dbb.css.map": "/Olivier-RIVIERE/system_solar.git/static/css/main.95675dbb.css.map",
+    "main.fe0f3d41.js.map": "/Olivier-RIVIERE/system_solar.git/static/js/main.fe0f3d41.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95675dbb.css",
+    "static/js/main.fe0f3d41.js"
+  ]
+}
