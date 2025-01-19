@@ -16,7 +16,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/planets/:planetId" element={<PlanetDetail />} />
         <Route path='/satellites/:sateliteId' element={<SatellitesDetail />} />
-        <Route path='/' element={<Home />} />
       </Routes>
       <Footer />
     </Router>
