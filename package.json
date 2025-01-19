@@ -2,7 +2,7 @@
   "name": "systeme-solaire",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olivier-riviere.github.io/systeme-solaire",
+  "homepage": "https://systemesolaire-rivoli.netlify.app/",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
