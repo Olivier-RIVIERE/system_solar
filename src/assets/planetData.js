@@ -13,7 +13,7 @@ const planetData = [
     id: 'mars', 
     name: 'Mars', 
     description: {
-      intro: 'La planète la plus proche du Soleil.',
+      intro: 'Mars, souvent appelée la planète rouge, est la quatrième planète à partir du Soleil.',
       characteristics: 'Mars est une planète rocheuse avec des températures très froides.',
       exploration: 'Elle a été explorée par plusieurs rovers, dont Perseverance en 2020.',
       interestingFact: 'Mars a des volcans géants, comme Olympus Mons, le plus grand volcan du système solaire.'
