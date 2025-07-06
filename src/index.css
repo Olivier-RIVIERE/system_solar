@@ -7,8 +7,9 @@
   scroll-behavior: smooth;
 }
 
-html, body {
-  height: 100%; 
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -70,7 +71,7 @@ body {
   margin-left: 10px;
 }
 
-.header nav .menu .accueil a{
+.header nav .menu .accueil a {
   color: #f1f0f0;
 }
 
@@ -99,7 +100,7 @@ body {
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 60px;
+  top: 35px;
   background-color: #f1f0f0;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -107,7 +108,7 @@ body {
 
 /* home */
 .home {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,6 +123,9 @@ body {
   height: auto;
   width: auto;
   margin: 20px 0;
+  border-radius: 33px 33px 33px 33px;
+  -webkit-border-radius: 33px 33px 33px 33px;
+  -moz-border-radius: 33px 33px 33px 33px;
 }
 
 .home h2 {
@@ -153,6 +157,7 @@ body {
   align-items: center;
   margin: 5% auto;
   padding: 20px;
+  text-align: left;
 }
 
 .container h2 {
@@ -167,7 +172,9 @@ body {
   height: auto;
   width: auto;
   margin-bottom: 20px;
-  border-radius: 10%;
+  border-radius: 33px 33px 33px 33px;
+  -webkit-border-radius: 33px 33px 33px 33px;
+  -moz-border-radius: 33px 33px 33px 33px;
 }
 
 .container p {
@@ -175,6 +182,11 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   line-height: 1.6;
+}
+
+.container strong {
+  font-style: italic;
+  text-decoration: underline;
 }
 
 .container a {
@@ -217,7 +229,7 @@ footer {
 }
 
 .scroll-to-top-icon:hover {
-  color: #0056b3; 
+  color: #0056b3;
 }
 
 /* ********MEDIA QUERIES******** */
@@ -229,7 +241,7 @@ footer {
   }
 
   h1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .menu-icon {
@@ -250,7 +262,7 @@ footer {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px; 
+    top: 70px;
     right: 10px;
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
@@ -302,17 +314,21 @@ footer {
     color: #f1f0f0;
   }
 
-  .home h2, .container h2,
-  .home h3, .container h3 {
-    font-size: 1.4rem; 
+  .home h2,
+  .container h2,
+  .home h3,
+  .container h3 {
+    font-size: 1.4rem;
   }
 
-  .home p, .container p {
-    font-size: 1rem; 
+  .home p,
+  .container p {
+    font-size: 1rem;
   }
 
-  .home img, .container img {
-    max-width: 80%; 
+  .home img,
+  .container img {
+    max-width: 80%;
   }
 }
 
@@ -320,23 +336,29 @@ footer {
   h1 {
     font-size: 1.2rem;
   }
+
   nav {
     display: none;
   }
-  .home h2, .container h2,
-  .home h3, .container h3 {
-    font-size: 1.1rem; 
+
+  .home h2,
+  .container h2,
+  .home h3,
+  .container h3 {
+    font-size: 1.1rem;
   }
 
-  .home p, .container p {
+  .home p,
+  .container p {
     font-size: 0.9rem;
   }
 
-  .home img, .container img {
-    max-width: 90%; 
+  .home img,
+  .container img {
+    max-width: 90%;
   }
 
-  .scroll-to-top-icon { 
-    font-size: 1.5rem; 
+  .scroll-to-top-icon {
+    font-size: 1.5rem;
   }
 }

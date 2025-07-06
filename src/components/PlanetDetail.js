@@ -14,10 +14,12 @@ const PlanetDetail = () => {
     <div className='container'>
       <h2>{planet.name}</h2>
       <img src={planet.image} alt={planet.name} />
-      <p><strong>Introduction:</strong> {planet.description.intro}</p>
-      <p><strong>Caractéristiques:</strong> {planet.description.characteristics}</p>
-      <p><strong>Exploration:</strong> {planet.description.exploration}</p>
-      <p><strong>Fait intéressant:</strong> {planet.description.interestingFact}</p>
+      <div>
+        <p><strong>Introduction:</strong> {planet.description.intro}</p>
+        <p><strong>Caractéristiques:</strong> {planet.description.characteristics}</p>
+        <p><strong>Exploration:</strong> {planet.description.exploration}</p>
+        <p><strong>Fait intéressant:</strong> {planet.description.interestingFact}</p>
+      </div>
       <a href={planet.url} target='_blank' rel='noopener noreferrer'>En savoir plus...</a>
     </div>
   )

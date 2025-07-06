@@ -13,10 +13,12 @@ const SatellitesDetail = () => {
     <div className='container'>
       <h2>{satelite.name}</h2>
       <img src={satelite.image} alt={satelite.name} />
-      <p><strong>Introduction:</strong> {satelite.description.intro}</p>
-      <p><strong>Caractéristiques:</strong> {satelite.description.characteristics}</p>
-      <p><strong>Exploration:</strong> {satelite.description.exploration}</p>
-      <p><strong>Fait intéressant:</strong> {satelite.description.interestingFact}</p>
+      <div>
+        <p><strong>Introduction:</strong> {satelite.description.intro}</p>
+        <p><strong>Caractéristiques:</strong> {satelite.description.characteristics}</p>
+        <p><strong>Exploration:</strong> {satelite.description.exploration}</p>
+        <p><strong>Fait intéressant:</strong> {satelite.description.interestingFact}</p>
+      </div>
       <a href={satelite.url} target='_blank' rel='noopener noreferrer'>En savoir plus...</a>
     </div>
   )
