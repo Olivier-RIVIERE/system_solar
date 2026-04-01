@@ -139,7 +139,6 @@ a, button { transition: color var(--transition), background var(--transition), o
   text-decoration: none;
 }
 
-/* Nav desktop */
 .header nav {
   display: flex;
 }
@@ -154,7 +153,6 @@ a, button { transition: color var(--transition), background var(--transition), o
   position: relative;
 }
 
-/* Liens nav */
 .header nav .menu li a,
 .header nav .menu .submenu-label {
   font-family: var(--font-display);
@@ -183,14 +181,12 @@ a, button { transition: color var(--transition), background var(--transition), o
   border-bottom-color: rgba(255,255,255,0.3);
 }
 
-/* FIX : chevron — espace à gauche pour respirer */
 .header .icon {
   font-size: 0.65rem;
   opacity: 0.55;
   margin-left: var(--space-2);
 }
 
-/* Dropdown */
 .header nav .menu .active {
   display: flex;
   flex-direction: column;
@@ -231,7 +227,6 @@ a, button { transition: color var(--transition), background var(--transition), o
 
 .none { display: none !important; }
 
-/* Burger */
 .menu-icon {
   display: none;
   font-size: 1.3rem;
@@ -415,14 +410,8 @@ a, button { transition: color var(--transition), background var(--transition), o
 }
 
 /* ============================================
-   CONTAINER — pages détail planètes / satellites
+   CONTAINER-HERO — hero plein écran page détail
    ============================================ */
-
-/*
-  FIX scroll : on ne fait plus margin-top négatif.
-  Le hero prend 100dvh et commence au top de la page (sous le header fixe
-  grâce au padding-top). Le scroll commence donc bien en haut.
-*/
 .container-hero {
   position: relative;
   width: 100%;
@@ -431,7 +420,6 @@ a, button { transition: color var(--transition), background var(--transition), o
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  /* Compense le header fixe sans décaler le scroll */
   padding-top: var(--header-h);
   scroll-snap-align: start;
 }
@@ -484,14 +472,26 @@ a, button { transition: color var(--transition), background var(--transition), o
   margin-bottom: var(--space-3);
 }
 
-/* Corps de la page détail */
+/* ============================================
+   CONTAINER — corps de la page détail
+   Occupe au moins un écran complet, comme le hero.
+   Le contenu commence en haut, le footer n'est
+   visible qu'après avoir scrollé jusqu'à la fin.
+   ============================================ */
 .container {
   width: 100%;
-  max-width: 860px;
-  padding: var(--space-16) var(--gutter);
+  min-height: 100dvh;          /* au moins un écran, comme .container-hero */
+  padding: var(--space-16) var(--gutter) var(--space-24);
   display: flex;
   flex-direction: column;
   gap: var(--space-8);
+  scroll-snap-align: start;    /* s'aligne proprement dans le snap */
+  max-width: none;             /* pleine largeur pour le snap */
+}
+
+/* Zone de contenu centrée */
+.container > * {
+  max-width: 860px;
 }
 
 .container img {
@@ -549,6 +549,7 @@ a, button { transition: color var(--transition), background var(--transition), o
   text-transform: uppercase;
   margin-top: var(--space-4);
   width: fit-content;
+  max-width: fit-content;
 }
 
 .container a:hover {
@@ -762,7 +763,8 @@ footer {
   }
 
   .container {
-    padding: var(--space-10) var(--space-4);
+    min-height: auto;          /* mobile : pas de snap forcé, scroll libre */
+    padding: var(--space-10) var(--space-4) var(--space-16);
   }
 
   .footer-meta {
