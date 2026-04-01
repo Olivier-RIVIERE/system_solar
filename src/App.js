@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/planets/:planetId" element={<PlanetDetail />} />
-        <Route path='/satellites/:sateliteId' element={<SatellitesDetail />} />
+        <Route path='/satellites/:satelliteId' element={<SatellitesDetail />} />
       </Routes>
       <Footer />
     </Router>

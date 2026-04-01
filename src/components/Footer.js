@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <span className="footer-copyright">&copy; 2025 — Tous droits réservés</span>
+        <span className="footer-copyright">&copy; {new Date().getFullYear()} — Tous droits réservés</span>
       </div>
       {isVisible && (
         <FontAwesomeIcon

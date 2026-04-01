@@ -1,10 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import satelliteData from '../assets/satellitesData'
+import satellitesData from '../assets/satellitesData'
 
 const SatellitesDetail = () => {
   const { satelliteId } = useParams();
-  const satellite = satelliteData.find((s) => s.id === satelliteId);
+  const satellite = satellitesData.find((s) => s.id === satelliteId);
 
   if (!satellite) {
     return (
