@@ -8,57 +8,105 @@ const Home = () => {
 
     function animateEtoile() {
       if (!etoile) return;
-
       const fromLeft = Math.random() > 0.5;
       const startX = fromLeft ? -50 : window.innerWidth + 50;
       const endX = fromLeft ? window.innerWidth + 50 : -50;
-
       const startY = Math.random() * window.innerHeight;
       const endY = startY + (Math.random() * 200 - 100);
 
-      // Réinitialise la position et l'opacité sans transition
       etoile.style.transition = 'none';
       etoile.style.left = `${startX}px`;
       etoile.style.top = `${startY}px`;
       etoile.style.opacity = 1;
-
-      // Force un repaint du navigateur (trick pour relancer une transition)
       void etoile.offsetWidth;
-
-      // Ajoute à nouveau la transition
       etoile.style.transition = 'all 2s ease-in-out';
-
-      // Lance le mouvement + disparition
       etoile.style.left = `${endX}px`;
       etoile.style.top = `${endY}px`;
       etoile.style.opacity = 0;
-
-      // boucle après 2.5s
       setTimeout(animateEtoile, 2500);
     }
 
     animateEtoile();
-
-    return () => { }; // rien à nettoyer
   }, []);
 
   return (
     <>
-      <div className="etoile"></div>
-      <div className='home'>
-        <h2>Bienvenue dans la découverte de notre système solaire</h2>
-        <img src={systemSolarImg} alt="Systeme solaire" />
-        <p>Le système solaire est un ensemble fascinant d'objets célestes qui gravitent autour du Soleil, une étoile située au centre de notre système. Il est constitué de huit planètes principales, dont la Terre, qui sont classées en fonction de leur proximité au Soleil : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus et Neptune. Chacune de ces planètes possède des caractéristiques uniques, des atmosphères distinctes et des conditions de surface variées. Le système solaire abrite également des centaines de lunes, des astéroïdes, des comètes et des objets transneptuniens, comme la ceinture de Kuiper et le nuage d'Oort. Le Soleil, bien plus massif que toutes les planètes réunies, représente environ 99,86 % de la masse du système solaire. Son énergie est essentielle à la vie sur Terre, fournissant chaleur et lumière.
+      <div className="etoile" aria-hidden="true"></div>
 
-          Outre les planètes et leurs satellites naturels, le système solaire est également le berceau d'événements célestes spectaculaires. Les comètes, par exemple, sont de petites masses de glace et de poussière qui, lorsqu'elles se rapprochent du Soleil, développent une brillante chevelure et une queue qui peut s'étendre sur des millions de kilomètres. Les astéroïdes, eux, se trouvent principalement dans la ceinture d'astéroïdes située entre Mars et Jupiter, bien que certains puissent aussi s'approcher de la Terre. Ces objets, bien que petits comparés aux planètes, jouent un rôle clé dans la compréhension de l'origine et de l'évolution de notre système solaire.
+      <main className="home">
 
-          Le système solaire est bien plus qu'un simple ensemble de corps célestes. Il est le fruit d'une formation complexe qui a eu lieu il y a environ 4,6 milliards d'années à partir d'un nuage de gaz et de poussière. Depuis sa formation, il continue d'évoluer, avec des missions spatiales modernes, comme celles de la NASA, qui nous permettent d'explorer ses limites et de mieux comprendre ses mystères. Chaque nouvelle découverte nous rapproche de la compréhension de l'univers et de notre place au sein de ce vaste cosmos.</p>
-        <h3>Le Soleil</h3>
-        <img src={sunImg} alt="Soleil" />
-        <p>Le Soleil, une étoile située au centre de notre système solaire, est une sphère de gaz chauds principalement composée d'hydrogène et d'hélium. Avec une température de surface d'environ 5 500°C, il génère une énergie colossale par le biais de la fusion nucléaire, un processus où l'hydrogène se transforme en hélium, libérant une immense quantité d'énergie. Cette énergie est indispensable à la vie sur Terre, car elle nourrit les processus climatiques et permet la photosynthèse, assurant ainsi la croissance des plantes et, par extension, la survie des êtres vivants. Le Soleil n'est pas une entité immobile : il effectue un mouvement rotatif autour de son axe, avec des régions proches de l'équateur qui tournent plus vite que celles près des pôles. Ce phénomène crée un champ magnétique complexe qui engendre des éruptions solaires et des vents solaires, qui ont un impact direct sur l'environnement spatial et la Terre, pouvant provoquer des perturbations dans les communications satellitaires ou même affecter les réseaux électriques.
+        {/* ── SECTION 1 : Système solaire ── */}
+        <section className="home-section">
+          <img
+            className="home-section__bg"
+            src={systemSolarImg}
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+          />
+          <div className="home-section__overlay" aria-hidden="true"></div>
 
-          Le Soleil est également l'élément clé du cycle de vie des étoiles. Il se trouve dans une phase stable de sa vie, appelée la séquence principale, mais à mesure qu'il vieillit, il commencera à épuiser son hydrogène et à se transformer. Dans quelques milliards d'années, il se dilatera en une géante rouge avant de finir par expulser ses couches externes pour devenir une naine blanche. Ce processus marquera la fin de l’ère du Soleil tel que nous le connaissons, mais il laisse derrière lui une empreinte durable sur l'ensemble du système solaire. Au-delà de son rôle vital dans la création de la vie sur Terre, le Soleil nous offre une opportunité unique d'étudier les étoiles et leurs comportements, un domaine qui permet aux scientifiques de mieux comprendre l'univers dans lequel nous évoluons.</p>
-      </div>
+          <div className="home-section__content">
+            <span className="section-tag">Exploration spatiale</span>
+            <h2>Notre système solaire</h2>
+            <p>
+              Huit planètes, des centaines de lunes, des milliers d'astéroïdes&nbsp;—
+              un cosmos à portée de regard.
+            </p>
+            <a href="#systeme" className="btn-spacex">Découvrir ↓</a>
+          </div>
+
+          <div className="scroll-hint" aria-hidden="true">
+            <span style={{ fontSize: '1.2rem' }}>↓</span>
+          </div>
+        </section>
+
+        {/* ── SECTION 2 : Le Soleil ── */}
+        <section className="home-section" id="systeme">
+          <img
+            className="home-section__bg"
+            src={sunImg}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <div className="home-section__overlay" aria-hidden="true"></div>
+
+          <div className="home-section__content">
+            <span className="section-tag">Notre étoile</span>
+            <h2>Le Soleil</h2>
+            <p>
+              99,86&nbsp;% de la masse du système solaire.
+              Source de toute chaleur et de toute lumière sur Terre.
+            </p>
+          </div>
+        </section>
+
+        {/* ── PROSE : textes complets ── */}
+        <div className="home-prose" id="en-savoir-plus">
+          <p>
+            Le système solaire est un ensemble fascinant d'objets célestes qui gravitent autour
+            du Soleil. Il est constitué de huit planètes principales&nbsp;: Mercure, Vénus, Terre,
+            Mars, Jupiter, Saturne, Uranus et Neptune. Chacune possède des caractéristiques uniques,
+            des atmosphères distinctes et des conditions de surface variées. Le système abrite
+            également des centaines de lunes, des astéroïdes, des comètes et des objets
+            transneptuniens comme la ceinture de Kuiper et le nuage d'Oort.
+          </p>
+          <p>
+            Les comètes développent une brillante chevelure lorsqu'elles s'approchent du Soleil,
+            tandis que les astéroïdes, concentrés entre Mars et Jupiter, témoignent de l'origine
+            de notre système vieux de 4,6 milliards d'années. Chaque nouvelle découverte nous
+            rapproche de la compréhension de notre place dans le cosmos.
+          </p>
+          <p>
+            Le Soleil génère son énergie par fusion nucléaire&nbsp;: l'hydrogène se transforme
+            en hélium, libérant une chaleur indispensable à la vie sur Terre. Dans quelques
+            milliards d'années, il se dilatera en géante rouge avant de finir naine blanche,
+            laissant derrière lui une empreinte durable sur l'ensemble du système solaire.
+          </p>
+        </div>
+
+      </main>
     </>
   )
 }

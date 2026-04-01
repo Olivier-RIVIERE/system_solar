@@ -1,27 +1,55 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import satelitesData from '../assets/satelitesData'
+import satelliteData from '../assets/satelliteData'
 
 const SatellitesDetail = () => {
-  const { sateliteId } = useParams();
-  const satelite = satelitesData.find((satelite) => satelite.id === sateliteId);
+  const { satelliteId } = useParams();
+  const satellite = satelliteData.find((s) => s.id === satelliteId);
 
-  if (!satelite) {
-    return <h2>Satellite non trouvée</h2>;
-  }
-  return (
-    <div className='container'>
-      <h2>{satelite.name}</h2>
-      <img src={satelite.image} alt={satelite.name} />
-      <div>
-        <p><strong>Introduction:</strong> {satelite.description.intro}</p>
-        <p><strong>Caractéristiques:</strong> {satelite.description.characteristics}</p>
-        <p><strong>Exploration:</strong> {satelite.description.exploration}</p>
-        <p><strong>Fait intéressant:</strong> {satelite.description.interestingFact}</p>
+  if (!satellite) {
+    return (
+      <div className="container" style={{ paddingTop: '10rem' }}>
+        <h2 style={{ display: 'block' }}>Satellite introuvable</h2>
       </div>
-      <a href={satelite.url} target='_blank' rel='noopener noreferrer'>En savoir plus...</a>
-    </div>
-  )
-}
+    );
+  }
 
-export default SatellitesDetail
+  return (
+    <>
+      {/* Hero plein écran */}
+      <div className="container-hero">
+        <img src={satellite.image} alt={satellite.name} loading="eager" />
+        <div className="container-hero__overlay" aria-hidden="true"></div>
+        <div className="container-hero__title">
+          <span className="planet-tag">Système solaire — Satellite naturel</span>
+          <h2>{satellite.name}</h2>
+        </div>
+      </div>
+
+      {/* Corps de la page */}
+      <div className="container">
+        <div className="planet-block">
+          <strong>Introduction</strong>
+          <p>{satellite.description.intro}</p>
+        </div>
+        <div className="planet-block">
+          <strong>Caractéristiques</strong>
+          <p>{satellite.description.characteristics}</p>
+        </div>
+        <div className="planet-block">
+          <strong>Exploration</strong>
+          <p>{satellite.description.exploration}</p>
+        </div>
+        <div className="planet-block">
+          <strong>Fait intéressant</strong>
+          <p>{satellite.description.interestingFact}</p>
+        </div>
+        <a href={satellite.url} target="_blank" rel="noopener noreferrer">
+          En savoir plus →
+        </a>
+      </div>
+    </>
+  );
+};
+
+export default SatellitesDetail;
