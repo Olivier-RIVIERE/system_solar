@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import satelliteData from '../assets/satelliteData'
+import satelliteData from '../assets/satellitesData'
 
 const SatellitesDetail = () => {
   const { satelliteId } = useParams();
